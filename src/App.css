@@ -21,19 +21,12 @@ img {
   color: #61dafb;
 }
 
-.idcard {
+idcard {
+  display: flex;
   line-height: 1;
   margin: 0;
   padding: 0;
   text-align: left;
-}
-
-.picture {
-  display: flex;
-  float: left;
-  align-items: flex-start;
-  height: 120px;
-  margin: 5px;
 }
 
 @keyframes App-logo-spin {

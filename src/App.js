@@ -4,6 +4,12 @@ import Greetings from './components/Greetings';
 import Random from './components/Random';
 import BoxColor from './components/BoxColor';
 import CreditCard from './components/CreditCard';
+import Rating from './components/Rating';
+import LikeButton from './components/LikeButton';
+import DriverCard from './components/DriverCard';
+import ClickablePicture from './components/ClickablePicture';
+import Dice from './components/Dice';
+import Carousel from './components/Carousel';
 
 import './App.css';
 
@@ -12,27 +18,25 @@ function App() {
     <div className="App">
       <IdCard
         picture="https://source.unsplash.com/random"
-        lastname="Diana"
-        firstname="Obiagwu"
+        firstName="Diana"
+        lastName="Obiagwu"
         gender="female"
         height={180}
         birthdate={new Date('1988, 7, 25')}
       />
       <br />
       <IdCard
-        lastName="Delores "
-        firstName="Obrien"
+        picture="https://randomuser.me/api/portraits/women/44.jpg"
+        firstName="Delores"
+        lastName="Obrien"
         gender="female"
         height={172}
         birthdate={new Date('1988-05-11')}
-        picture="https://randomuser.me/api/portraits/women/44.jpg"
       />
-
       <Greetings lang="en"> Diana</Greetings>
       <Greetings lang="es"> Alexio</Greetings>
-      <Greetings lang="de">Ludwig</Greetings>
-      <Greetings lang="fr">François</Greetings>
-      <Greetings children="This is a text" />
+      <Greetings lang="de"> Ludwig</Greetings>
+      <Greetings lang="fr"> François</Greetings>
       <Random min={1} max={6} />
       <Random min={1} max={100} />
       <BoxColor r={255} g={0} b={0} />
@@ -66,6 +70,44 @@ function App() {
         owner="Firstname Lastname"
         bgColor="#ddbb55"
         color="white"
+      />
+      <Rating>0</Rating>
+      <Rating>1.49</Rating>
+      <Rating>1.5</Rating>
+      <Rating>3</Rating>
+      <Rating>4</Rating>
+      <Rating>5</Rating>
+      <DriverCard
+        name="Travis Kalanick"
+        rating={4.2}
+        img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+        car={{
+          model: 'Toyota Corolla Altis',
+          licensePlate: 'CO42DE',
+        }}
+      />
+      <DriverCard
+        name="Dara Khosrowshahi"
+        rating={4.9}
+        img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+        car={{
+          model: 'Audi A3',
+          licensePlate: 'BE33ER',
+        }}
+      />
+      <LikeButton /> <LikeButton />
+      <ClickablePicture
+        img="/img/persons/maxence.png"
+        imgClicked="/img/persons/maxence-glasses.png"
+      />
+      <Dice />
+      <Carousel
+        imgs={[
+          'https://randomuser.me/api/portraits/women/1.jpg',
+          'https://randomuser.me/api/portraits/men/1.jpg',
+          'https://randomuser.me/api/portraits/women/2.jpg',
+          'https://randomuser.me/api/portraits/men/2.jpg',
+        ]}
       />
     </div>
   );

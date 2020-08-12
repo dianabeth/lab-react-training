@@ -1,26 +1,29 @@
 import React from 'react';
 
 const Greetings = ({ lang, children }) => {
+  let msg;
   switch (lang) {
     case 'en':
-      lang = 'Hello';
+      msg = 'Hello';
       break;
     case 'es':
-      lang = 'Hola';
+      msg = 'Hola';
       break;
     case 'de':
-      lang = 'Hallo';
+      msg = 'Hallo';
       break;
     case 'fr':
-      lang = 'Bonjour';
+      msg = 'Bonjour';
       break;
     default:
-      lang = 'Olá';
+      msg = 'Olá';
   }
   return (
     <div>
-      <h6>{lang}</h6>
-      <p>{children}</p>
+      <p>
+        {msg}
+        {children}
+      </p>
     </div>
   );
 };

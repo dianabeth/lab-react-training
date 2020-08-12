@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Random = ({ max, min }) => {
-  let randomVal = Math.floor(Math.random() * (max - min + min));
+  let randomVal = Math.floor(Math.random() * (max - min + 1) + min);
   return (
     <h6>
       This ia a random value between {min} and {max} = {'>'} {randomVal}

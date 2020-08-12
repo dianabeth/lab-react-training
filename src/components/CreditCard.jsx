@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './CreditCard.css';
 const CreditCard = ({
   type,
   number,
@@ -11,15 +11,29 @@ const CreditCard = ({
   color,
 }) => {
   return (
-    <div className="creditcard">
-      <p> {type}</p>
-      <p>{number}</p>
-      <p>{expirationMonth}</p>
-      <p>{expirationYear}</p>
-      <p>{bank}</p>
-      <p>{owner}</p>
-      <p>{bgColor}</p>
-      <p>{color}</p>
+    <div
+      className="credit-card"
+      style={{ backgroundColor: bgColor, color: color }}
+    >
+      <div className="type">
+        <h4> {type} </h4>
+      </div>
+
+      <div className="number">
+        <p> **** **** **** {number.substr(-4)}</p>
+      </div>
+      <div className="info">
+        <div className="infoLine">
+          <p>
+            Expires {('0' + expirationMonth).substr(-2)}/
+            {expirationYear.toString().substr(2)}
+          </p>
+          <p className="bank">{bank}</p>
+        </div>
+        <div>
+          <p>{owner}</p>
+        </div>
+      </div>
     </div>
   );
 };

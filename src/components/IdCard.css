@@ -1,0 +1,16 @@
+.idcard {
+  display: flex;
+  padding: 0.5em;
+  border: 1px solid black;
+  text-align: left;
+  max-width: 400px;
+  line-height: 0.5;
+  margin-left: 30px;
+}
+
+.idcard img {
+  display: block;
+  flex: 0 0 auto;
+  width: 186px;
+  margin: 1em;
+}

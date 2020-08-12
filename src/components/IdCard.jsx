@@ -1,8 +1,9 @@
 import React from 'react';
+import './IdCard.css';
 
 const IdCard = ({
-  lastname,
-  firstname,
+  firstName,
+  lastName,
   gender,
   height,
   birthdate,
@@ -10,14 +11,14 @@ const IdCard = ({
 }) => {
   return (
     <div className="idcard">
-      <div className="picture">
-        <img src={picture} />
+      <img src={picture} alt="pic" />
+      <div>
+        <p>First name: {firstName}</p>
+        <p>Last name: {lastName}</p>
+        <p>Gender: {gender} </p>
+        <p>Height: {height / 100}m</p>
+        <p>Birth: {birthdate.toDateString()} </p>
       </div>
-      <h3>First name: {lastname}</h3>
-      <h3>Last name: {firstname}</h3>
-      <p>Gender: {gender} </p>
-      <p>Height: {height}</p>
-      <p>Birth: {birthdate.toString()} </p>
     </div>
   );
 };

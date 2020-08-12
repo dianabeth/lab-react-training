@@ -1,0 +1,37 @@
+.credit-card {
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-right: 3em;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.type {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin: 0.8em;
+}
+
+.infoLine {
+  display: flex;
+  flex-direction: row;
+}
+
+.info {
+  margin: 1em;
+}
+
+.info p {
+  margin: 0 1em;
+  padding: 0;
+  line-height: 1.2em;
+}
+
+.number {
+  font-size: 2em;
+  justify-content: center;
+  align-self: center;
+}
